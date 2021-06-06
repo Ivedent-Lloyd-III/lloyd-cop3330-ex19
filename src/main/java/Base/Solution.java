@@ -11,68 +11,21 @@ public class Solution {
 
     static Scanner in = new Scanner(System.in);
 
-    public static void main(String[] args){
-        
-        int weight = weightInput();
-        int height = heightInput();
-
-
-    }
-
-    private static int weightInput() {
+    public static void main(String[] args) {
 
         System.out.println("What is your current body weight?");
-        String weightInput = in.nextLine();
+        double weight = userInput();
 
-
-        for (;;) {
-
-            for (char c : weightInput.toCharArray()) {
-
-                aa:
-
-                if (!Character.isAlphabetic(c)) {
-                    break aa;
-                }
-
-                else{
-
-                    int weight = Integer.parseInt(weightInput);
-
-                    return weight;
-
-                }
-            }
-        }
+        System.out.println("What is your current height?");
+        double height = userInput();
 
     }
 
-    private static int heightInput() {
+    private static double userInput(){
 
-            System.out.println("What is your current height?");
-            String heightInput = in.nextLine();
+        double userInput = in.nextInt();
 
-            aa:
-
-            for (;;) {
-
-                bb:
-                for (char c : heightInput.toCharArray()) {
-                    if (!Character.isAlphabetic(c)) {
-                        break bb;
-                    }
-                    else{
-
-                        break aa;
-
-                    }
-                }
-            }
-
-        int height = Integer.parseInt(heightInput);
-
-            return height;
+        return userInput;
 
     }
-
 }
