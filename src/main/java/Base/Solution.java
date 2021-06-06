@@ -19,7 +19,9 @@ public class Solution {
         System.out.print("What is your current height? (in inches) ");
         double height = userInput();
 
-        double BMI = ( weight / ( height * height) ) * 703;
+
+
+        double BMI = (weight / (height * height) ) * 703;
 
         System.out.println("Your BMI is "+String.format("%.2f",BMI));
 
